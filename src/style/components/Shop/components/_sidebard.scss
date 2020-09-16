@@ -1,0 +1,99 @@
+.shop {
+    &__sidebar {
+        padding-right: 20px;
+        &__search {
+            margin-bottom: 20px;
+            form {
+                position: relative;
+                input {
+                    width: 100%;
+                    font-size: 15px;
+                    color: #b7b7b7;
+                    padding-left: 20px;
+                    border: 1px solid #e5e5e5;
+                    height: 42px;
+                }
+                button {
+                    color: #b7b7b7;
+                    font-size: 15px;
+                    border: none;
+                    background: transparent;
+                    position: absolute;
+                    right: 0;
+                    padding: 0 15px;
+                    top: 0;
+                    height: 100%;
+                }
+            }
+        }
+        &__accordion {
+            .MuiPaper-root:hover ::-webkit-scrollbar {
+                width: 5px;
+            }
+            ::-webkit-scrollbar {
+                width: 0;
+                visibility: hidden;
+                transition: all 0.6s ease-in-out;
+            }
+
+            /* Track */
+            ::-webkit-scrollbar-track {
+                width: 5px;
+                z-index: auto;
+                background: rgb(229, 229, 229);
+                cursor: default;
+                position: absolute;
+                transition: all 0.6s ease-in-out;
+            }
+
+            /* Handle */
+            ::-webkit-scrollbar-thumb {
+                background-color: rgb(13, 13, 13);
+                border-radius: 10px;
+                transition: all 0.6s ease-in-out;
+            }
+            ul {
+                height: 225px;
+                padding: 0;
+                margin: 0;
+                list-style: none;
+                li {
+                    a {
+                        color: #b7b7b7;
+                        font-size: 15px;
+                        line-height: 32px;
+                        -webkit-transition: all, 0.3s;
+                        -o-transition: all, 0.3s;
+                        transition: all, 0.3s;
+                        display: block;
+                        &:hover {
+                            color: rgb(13, 13, 13);
+                            transform: translateX(15px);
+                        }
+                    }
+                }
+            }
+            .MuiAccordion-root.Mui-expanded {
+                margin: 0;
+            }
+            .MuiAccordionDetails-root {
+                padding: 0 16px;
+                overflow-x: auto;
+            }
+        }
+    }
+
+    &__product__option {
+        margin-bottom: 45px;
+        &__left {
+            p {
+                color: #111111;
+                margin-bottom: 0;
+                margin-top: 0;
+            }
+        }
+    }
+    .MuiPagination-ul{
+        justify-content: center;
+    }
+}
