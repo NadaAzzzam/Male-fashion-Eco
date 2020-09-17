@@ -1,0 +1,101 @@
+$prColor: #111111;
+
+$secColor: #3d3d3d;
+
+$thColor: #e53637;
+
+$fthColor: #b7b7b7;
+$white: #ffffff;
+
+* {
+    font-family: "Nunito Sans", sans-serif !important;
+}
+:focus {
+    outline: none;
+}
+a {
+    text-decoration: none !important;
+}
+.text-red {
+    color: $thColor;
+}
+.text-black {
+    color: $prColor;
+}
+.text-red {
+    color: $thColor;
+}
+.text-white {
+    color: $white;
+}
+body {
+    font-family: "Nunito Sans", sans-serif !important;
+    overflow-x: hidden;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529 !important;
+    text-align: left;
+    background-color: #fff;
+}
+// BUTTONS
+.MuiButton-root {
+    z-index: 213213;
+}
+.section {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    &-title {
+        margin-bottom: 20px;
+        text-align: center;
+        span {
+            color: #e53637;
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+            display: block;
+        }
+        h2 {
+            color: #111111;
+            font-weight: 700;
+            line-height: 46px;
+            margin-top: 0;
+        }
+    }
+}
+h2 {
+    font-size: 36px;
+}
+h3 {
+    font-size: 30px;
+}
+h5 {
+    font-size: 18px;
+}
+h4 {
+    font-size: 24px;
+}
+h6 {
+    font-size: 16px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+p {
+    font-size: 15px;
+    color: #3d3d3d;
+    font-weight: 400;
+    line-height: 25px;
+}
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}

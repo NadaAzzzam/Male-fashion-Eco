@@ -1,0 +1,19 @@
+@import './base';
+// @import '../../node_modules/@fortawesome/fontawesome-free/css/all.css';
+@import '../../node_modules/slick-carousel/slick/slick.css';
+@import '../../node_modules/slick-carousel/slick/slick-theme.css';
+@import '../../node_modules/bootstrap/dist/css/bootstrap-grid.css';
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800;900&amp;display=swap');
+@import './abstract/mixins';
+@import './layouts/header';
+@import './layouts/footer';
+@import './layouts/pageTitle';
+
+@import './components/Home/home';
+@import './components/Shop/shop';
+@import './components/SingleProduct/singleProduct';
+@import './components/Contact/contact';
+@import './components/Cart/cart';
+@import './components/Checkout/checkout';
+@import './components/Preloader/preloader';
+@import './components/Cursor/cursor';
