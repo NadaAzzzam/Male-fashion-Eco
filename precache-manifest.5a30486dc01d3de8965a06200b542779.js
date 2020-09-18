@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "341122a9a828d37b58a202dcfe283a84",
+    "revision": "d3f3b83d0b908422a0c82fdf718c2c58",
     "url": "/Male-fashion-Eco/index.html"
   },
   {
-    "revision": "0fdd9aee40764708fe7d",
+    "revision": "8ab253448594447143de",
     "url": "/Male-fashion-Eco/static/css/2.4c51df0f.chunk.css"
   },
   {
-    "revision": "bd9056e1b474f5b17811",
-    "url": "/Male-fashion-Eco/static/css/main.0c3b4c80.chunk.css"
+    "revision": "3648d94e4bdeef3094ea",
+    "url": "/Male-fashion-Eco/static/css/main.0d3576b9.chunk.css"
   },
   {
-    "revision": "0fdd9aee40764708fe7d",
-    "url": "/Male-fashion-Eco/static/js/2.1215bdf1.chunk.js"
+    "revision": "8ab253448594447143de",
+    "url": "/Male-fashion-Eco/static/js/2.88d7c887.chunk.js"
   },
   {
     "revision": "5e9b6f5c16b720e8a86875f97734673e",
-    "url": "/Male-fashion-Eco/static/js/2.1215bdf1.chunk.js.LICENSE.txt"
+    "url": "/Male-fashion-Eco/static/js/2.88d7c887.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "bd9056e1b474f5b17811",
-    "url": "/Male-fashion-Eco/static/js/main.9c2a8bd7.chunk.js"
+    "revision": "3648d94e4bdeef3094ea",
+    "url": "/Male-fashion-Eco/static/js/main.110147c1.chunk.js"
   },
   {
     "revision": "cab3c1e626f444841217",
