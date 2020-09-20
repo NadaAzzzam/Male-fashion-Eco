@@ -91,7 +91,7 @@ function Footer(props) {
                 <Grid container>
                     <Grid lg={12} item xs={12} >
                         <div className="footer__copyright__text">
-                            <p>Copyright ©  20202020 All rights reserved | This template is made with   <FavoriteBorder /> by <a href="https://colorlib.com" className="text-red">Colorlib</a>
+                            <p>Copyright ©  20202020 All rights reserved | This template is made with   <FavoriteBorder /> by <a href="https://eplango.com/" className="text-red">Eplango</a>
                             </p>
                         </div>
                     </Grid>

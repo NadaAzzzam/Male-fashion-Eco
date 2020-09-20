@@ -1,18 +1,17 @@
+
 import React from 'react';
-import Avatar from '@material-ui/core/Avatar';
-import Button from '@material-ui/core/Button';
-import CssBaseline from '@material-ui/core/CssBaseline';
-import TextField from '@material-ui/core/TextField';
-import FormControlLabel from '@material-ui/core/FormControlLabel';
-import Checkbox from '@material-ui/core/Checkbox';
-import Paper from '@material-ui/core/Paper';
-import Grid from '@material-ui/core/Grid';
-import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
-import Typography from '@material-ui/core/Typography';
-import { makeStyles } from '@material-ui/core/styles';
-import { NavLink } from 'react-router-dom';
-
-
+import { Formik, Form, Field } from 'formik';
+import {
+    Grid,
+    LinearProgress,
+    makeStyles,
+    Box, Avatar, Typography, Paper
+} from '@material-ui/core';
+import {
+    TextField
+} from 'formik-material-ui';
+import { ColorButton } from '../../../components/UI/Buttons';
+import { LockOutlined } from '@material-ui/icons';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -34,83 +33,131 @@ const useStyles = makeStyles((theme) => ({
     },
     avatar: {
         margin: theme.spacing(1),
-        backgroundColor: theme.palette.secondary.main,
+        backgroundColor: '#111111',
     },
-    form: {
+    mb: {
+        marginBottom: theme.spacing(3)
+    },
+    textForm: {
         width: '100%', // Fix IE 11 issue.
-        marginTop: theme.spacing(1),
+        '& label.Mui-focused': {
+            color: '#111111',
+        },
+        '& .MuiInput-underline:after': {
+            borderBottomColor: '#111111',
+        },
+        '& .MuiOutlinedInput-root': {
+
+            '&.Mui-focused fieldset': {
+                borderColor: '#111111',
+            }
+        }
     },
     submit: {
-        margin: theme.spacing(3, 0, 2),
+        textAlign: 'center',
+
     },
+    button: {
+        width: '100%'
+    }
 }));
 
 export default function SignIn() {
     const classes = useStyles();
 
     return (
-        <Grid container component="main" className={classes.root}>
-            <CssBaseline />
+        <Grid container >
             <Grid item xs={false} sm={4} md={7} className={classes.image} />
             <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square>
-                <div className={classes.paper}>
-                    <Avatar className={classes.avatar}>
-                        <LockOutlinedIcon />
-                    </Avatar>
-                    <Typography component="h1" variant="h5">
-                        Sign in
-          </Typography>
-                    <form className={classes.form} noValidate>
-                        <TextField
-                            variant="outlined"
-                            margin="normal"
-                            required
-                            fullWidth
-                            id="email"
-                            label="Email Address"
-                            name="email"
-                            autoComplete="email"
-                            autoFocus
-                        />
-                        <TextField
-                            variant="outlined"
-                            margin="normal"
-                            required
-                            fullWidth
-                            name="password"
-                            label="Password"
-                            type="password"
-                            id="password"
-                            autoComplete="current-password"
-                        />
-                        <FormControlLabel
-                            control={<Checkbox value="remember" color="primary" />}
-                            label="Remember me"
-                        />
-                        <Button
-                            type="submit"
-                            fullWidth
-                            variant="contained"
-                            color="primary"
-                            className={classes.submit}
-                        >
-                            Sign In
-            </Button>
-                        <Grid container>
-                            <Grid item xs>
-                                <NavLink to="/" variant="body2">
-                                    Forgot password?
-                </NavLink>
-                            </Grid>
-                            <Grid item>
-                                <NavLink to="/" variant="body2">
-                                    {"Don't have an account? Sign Up"}
-                                </NavLink>
-                            </Grid>
-                        </Grid>
+                <Formik className='section'
+                    initialValues={{
+                        email: '',
+                        password: ''
+                    }}
+                    validate={values => {
+                        const errors = {};
+                        // email
+                        if (!values.email) {
+                            errors.email = 'Required';
+                        } else if (
+                            !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)
+                        ) {
+                            errors.email = 'Invalid email address';
+                        }
 
-                    </form>
-                </div>
+                        // Password
+                        if (!values.password) {
+                            errors.password = 'Required';
+                        } else if (
+                            values.password.length < 8
+                        ) {
+                            errors.password = ' password should at least 8 chars';
+                        }
+
+                        return errors;
+                    }}
+                    onSubmit={(values, { setSubmitting }) => {
+                        console.log(values)
+                    }}
+                    render={({ submitForm, isSubmitting, touched, errors }) => (
+                        <Form className={classes.paper}>
+                            <div className={classes.mb}>
+                                <Avatar className={classes.avatar}>
+                                    <LockOutlined />
+                                </Avatar>
+                                <Typography component="h1" variant="h5">
+                                    Sign up
+        </Typography>
+                            </div>
+
+
+                            <Grid container >
+
+                                <Grid item xs={12} >
+                                    <Box marginBottom={2}>
+                                        <Field
+                                            className={classes.textForm}
+                                            component={TextField}
+                                            variant="outlined"
+                                            name="email"
+                                            type="email"
+                                            label="Email"
+                                        />
+                                    </Box>
+                                </Grid>
+
+                                <Grid item xs={12} >
+                                    <Box marginBottom={2}>
+                                        <Field
+                                            className={classes.textForm}
+                                            component={TextField}
+                                            variant="outlined"
+                                            type="password"
+                                            label="Password"
+                                            name="password"
+                                        />
+                                    </Box>
+                                </Grid>
+
+                                <Grid item xs={12} >
+                                    {isSubmitting && <LinearProgress />}
+                                    <Box className={classes.submit} >
+                                        <ColorButton
+                                            variant="contained"
+                                            color="primary"
+                                            onClick={submitForm}
+                                            disabled={isSubmitting}
+                                            className={classes.button}
+                                        >
+                                            Submit
+                  </ColorButton>
+                                    </Box>
+                                </Grid>
+                            </Grid>
+                        </Form>
+
+                    )}
+                />
             </Grid>
         </Grid>
     );

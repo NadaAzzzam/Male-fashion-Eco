@@ -10,7 +10,7 @@ function Preloader(props) {
                 if (oldProgress === 100) {
                     return 0;
                 }
-                const diff = Math.random() * 10;
+                const diff = Math.random() * 20;
                 if (Math.min(oldProgress + diff, 100) === 100) {
                     setIsDone(false)
                 }
