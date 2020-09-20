@@ -18,7 +18,7 @@ function ProductContent(props) {
         <div className="product__details__content">
             <Container>
                 <Grid container>
-                    <Grid items lg={7} sm={12} xs={12} md={7}>
+                    <Grid item lg={7} sm={12} xs={12} md={7}>
                         <div className="product__details__content--text">
                             <h4>Hooded thermal anorak</h4>
                             <div className="rating">
