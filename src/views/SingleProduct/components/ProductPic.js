@@ -12,7 +12,7 @@ import bgthumb3 from '../../../assets/images/shop-details/product-big-3.png';
 import bgthumb4 from '../../../assets/images/shop-details/product-big-4.png';
 
 
-function ProductPic(props) {
+function ProductPic() {
     const [bg,SetBg]=useState(bgthumb1);
 
     return (
@@ -27,29 +27,29 @@ function ProductPic(props) {
                     <Grid item xs={3} md={3} lg={3}>
                         <ul className="nav nav-tabs" >
                             <li className="nav-item">
-                                <a onClick={()=>{SetBg(bgthumb1)}} className="nav-link active"   >
+                                <span onClick={()=>{SetBg(bgthumb1)}} className="nav-link active"   >
                                     <div className="product__thumb__pic " style={{ backgroundImage: `url(${thumb1})` }}>
                                     </div>
-                                </a>
+                                </span>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" onClick={()=>{SetBg(bgthumb2)}}  >
+                                <span className="nav-link" onClick={()=>{SetBg(bgthumb2)}}  >
                                     <div className="product__thumb__pic " style={{ backgroundImage: `url(${thumb2})` }}>
                                     </div>
-                                </a>
+                                </span>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link"  onClick={()=>{SetBg(bgthumb3)}}  >
+                                <span className="nav-link"  onClick={()=>{SetBg(bgthumb3)}}  >
                                     <div className="product__thumb__pic " style={{ backgroundImage: `url(${thumb3})` }}>
                                     </div>
-                                </a>
+                                </span>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" onClick={()=>{SetBg(bgthumb4)}}   >
+                                <span className="nav-link" onClick={()=>{SetBg(bgthumb4)}}   >
                                     <div className="product__thumb__pic " style={{ backgroundImage: `url(${thumb4})` }}>
                                         <PlayCircleOutline />
                                     </div>
-                                </a>
+                                </span>
                             </li>
                         </ul>
                     </Grid>

@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import Header from './layouts/Header/Header';
 import Routes from './routes';
 import ScrollTop from './components/ScrollTop/ScrollTop';
-import { CssBaseline, Fab } from '@material-ui/core';
+import { CssBaseline, Fab, LinearProgress } from '@material-ui/core';
 import { KeyboardArrowUp } from '@material-ui/icons';
 import Footer from './layouts/Footer';
 import Preloader from './components/Preloader/Preloader';
@@ -13,11 +13,13 @@ function App() {
   return (
     <>
       <AnimatedCursor />
-      {/* <Preloader /> */}
+      <Preloader />
       <Header />
       <CssBaseline />
       <main>
-        <Routes />
+        <Suspense fallback={<LinearProgress/>}>
+          <Routes />
+        </Suspense>
       </main>
       {/* SCROLL TO TOP */}
       <ScrollTop >

@@ -1,23 +1,22 @@
 
-import React from 'react';
+import React, { lazy } from 'react';
 import { Switch, Route, Redirect, useHistory, useLocation } from 'react-router-dom';
-import Home from './views/Home/Home';
-import CheckOut from './views/CheckOut/CheckOut';
-import ContactUs from './views/ContactUs/ContactUs';
-import SignIn from './views/Auth/SignIn/SignIn';
-import SingnUp from './views/Auth/SignUp/SingnUp';
-import Shop from './views/Shop/Shop';
-import SingleProduct from './views/SingleProduct/SingleProduct';
-import Cart from './views/Cart/Cart';
+const CheckOut = lazy(() => import('./views/CheckOut/CheckOut'))
+const ContactUs = lazy(() => import('./views/ContactUs/ContactUs'))
+const SignIn = lazy(() => import('./views/Auth/SignIn/SignIn'))
+const SingnUp = lazy(() => import('./views/Auth/SignUp/SingnUp'))
+const Shop = lazy(() => import('./views/Shop/Shop'))
+const SingleProduct = lazy(() => import('./views/SingleProduct/SingleProduct'))
+const Cart = lazy(() => import('./views/Cart/Cart'))
+const Home = lazy(() => import('./views/Home/Home'))
 
 const Routes = () => {
     const history = useHistory()
-    let location =useLocation()
+    let location = useLocation()
 
     if (location.hash.startsWith('#/')) {
         history.push(location.hash.replace('#', '')) // or history.replace
     }
-
     return (
         <Switch>
             <Route exact path="/home" component={Home} />
@@ -29,13 +28,7 @@ const Routes = () => {
             <Route path="/shop-details" component={SingleProduct} />
             <Route path="/shopping-cart" component={Cart} />
             <Redirect from="/" to="/home" />
-
         </Switch>
     )
 }
-
-
-
-
-
 export default Routes;
