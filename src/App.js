@@ -13,7 +13,7 @@ function App() {
   return (
     <>
       <AnimatedCursor />
-      <Preloader />
+      {/* <Preloader /> */}
       <Header />
       <CssBaseline />
       <main>
