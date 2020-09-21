@@ -34,7 +34,7 @@ const useStyles = makeStyles({
 export default function HeaderTop() {
   const classes = useStyles();
   return (
-    <div className={classes.root}>
+    <div  className={`${classes.root} mobile_header-top`}>
 
       <AppBar position="sticky" className={classes.header}>
         <Container>

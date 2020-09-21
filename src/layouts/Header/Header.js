@@ -4,7 +4,7 @@ import HeaderTop from './HeaderTop/HeaderTop';
 
 const Header = (props)=> {
     return (
-        <header>
+        <header className="header">
             <HeaderTop/>
            <HeaderSecond/>
         </header>

@@ -37,7 +37,7 @@ export default function Hero(props) {
                                             with an unwavering
                                                     commitment to exceptional quality.</p>
                                             <ColorButton onClick={() => { console.log('hi') }} endIcon={<ArrowForward />} >Shop Now</ColorButton>
-                                            <div className="hero__social">
+                                            <div className="hero__social   flex-center">
                                                 <Link to="/"><Facebook /></Link>
                                                 <Link to="/"><Twitter /></Link>
                                                 <Link to="/"><Pinterest /></Link>
@@ -62,7 +62,7 @@ export default function Hero(props) {
                                             with an unwavering
                                                     commitment to exceptional quality.</p>
                                             <ColorButton onClick={() => { console.log('hi') }} endIcon={<ArrowForward />} >Shop Now</ColorButton>
-                                            <div className="hero__social">
+                                            <div className="hero__social flex-center">
                                                 <Link to="/"><Facebook /></Link>
                                                 <Link to="/"><Twitter /></Link>
                                                 <Link to="/"><Pinterest /></Link>

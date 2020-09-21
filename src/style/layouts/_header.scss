@@ -1,6 +1,11 @@
 .header {
     &__logo {
         padding: 30px 0;
+        @include respond(tab-port) {
+            img {
+                width: 11rem;
+            }
+        }
     }
     &__menu {
         // text-align: center;
@@ -54,12 +59,88 @@
         padding: 1.5rem 0 0 0;
         width: 100%;
         text-align: right;
-        a{
+        a {
             display: inline-block;
             text-align: center;
         }
-        p{
+        p {
             margin-top: 0;
         }
     }
+
+    &__wrapper {
+        padding: 50px 20px 30px 30px;
+
+        &__links {
+            display: inline-block;
+            a {
+                color: #111111;
+                font-size: 13px;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                margin-right: 16px;
+                display: inline-block;
+                font-weight: 600;
+            }
+        }
+        &__option {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        &__nav-option {
+            text-align: center;
+            margin-bottom: 25px;
+            span {
+                vertical-align: super;
+                font-size: 15px;
+                color: #111111;
+                font-weight: 700;
+                margin-left: 5px;
+            }
+        }
+        &__list {
+            nav {
+                ul {
+                    li {
+                        a {
+                            padding: 7px 0;
+                            margin: 0;
+                            color: #111111;
+                            font-weight: 600;
+                            display: block;
+                        }
+                    }
+                }
+            }
+        }
+        &-text {
+            p {
+                color: #111111;
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+.mobile_toggler {
+    display: none;
+}
+@include respond(tab-port) {
+    .mobile {
+        &_menu {
+            display: none;
+        }
+        &_cart {
+            display: none;
+        }
+        &_toggler {
+            display: block;
+        }
+        &_header-top {
+            display: none;
+        }
+    }
+}
+.MuiBackdrop-root {
+    background-color: rgba(0, 0, 0, 0.7) !important;
 }

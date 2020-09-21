@@ -42,7 +42,7 @@ function Footer(props) {
                             <Link to="/"><img src={payment} alt="" /></Link>
                         </div>
                     </Grid>
-                    <Grid className={classes.control1} lg={2} item md={6} xl={2} xs={12} sm={6}>
+                    <Grid className={classes.control1} lg={2} item md={6} xl={2} xs={12} sm={12}>
                         <div className="footer__widget">
                             <h6>Shopping</h6>
                             <ul>

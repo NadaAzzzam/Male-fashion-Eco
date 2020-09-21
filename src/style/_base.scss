@@ -7,9 +7,6 @@ $thColor: #e53637;
 $fthColor: #b7b7b7;
 $white: #ffffff;
 
-* {
-    font-family: "Nunito Sans", sans-serif !important;
-}
 :focus {
     outline: none;
 }
@@ -47,6 +44,10 @@ body {
 // BUTTONS
 .MuiButton-root {
     z-index: 213213;
+}
+.MuiTab-root,.MuiTypography-body1{
+    font-family: "Nunito Sans", sans-serif !important;
+
 }
 .section {
     padding-top: 100px;
