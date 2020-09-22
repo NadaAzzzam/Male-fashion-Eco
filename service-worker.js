@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/Male-fashion-Eco/precache-manifest.5a30486dc01d3de8965a06200b542779.js"
+  "/Male-fashion-Eco/precache-manifest.997e11b98e833b13476e6d15baa96561.js"
 );
 
 self.addEventListener('message', (event) => {
