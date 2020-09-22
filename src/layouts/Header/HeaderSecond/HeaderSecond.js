@@ -82,11 +82,11 @@ export default function HeaderSecond() {
         </div>
         <div className="header__wrapper-social">
          
-          <div class="flex-center">
-            <i class="fab fa-twitter fa-2x icon-3d"></i>
-            <i class="fab fa-facebook-f fa-2x icon-3d"></i>
-            <i class="fab fa-instagram fa-2x icon-3d"></i>
-            <i class="fab fa-whatsapp fa-2x icon-3d"></i>
+          <div className="flex-center">
+            <i className="fab fa-twitter fa-2x icon-3d"></i>
+            <i className="fab fa-facebook-f fa-2x icon-3d"></i>
+            <i className="fab fa-instagram fa-2x icon-3d"></i>
+            <i className="fab fa-whatsapp fa-2x icon-3d"></i>
           </div>
         </div>
       </div>

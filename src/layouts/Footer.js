@@ -10,9 +10,15 @@ const useStyles = makeStyles((theme) => ({
     },
     control1: {
         marginLeft: theme.spacing(12),
+        ['@media (max-width: 1280px)']: {
+            marginLeft: theme.spacing(0),
+        },
     },
     control2: {
         marginRight: theme.spacing(12),
+        ['@media (max-width: 1280px)']: {
+            marginRight: theme.spacing(0),
+        },
     },
     input: {
         '& .MuiInputBase-input': {
@@ -33,7 +39,7 @@ function Footer(props) {
         <footer className="footer">
             <Container>
                 <Grid container direction="row">
-                    <Grid lg={3} item md={6} xl={3} xs={12} sm={6}>
+                    <Grid lg={3} item md={6} xl={3} xs={12} sm={12}>
                         <div className="footer__about">
                             <div className="footer__logo">
                                 <Link to="/"><img src={footerLogo} alt="" /></Link>
@@ -53,7 +59,7 @@ function Footer(props) {
                             </ul>
                         </div>
                     </Grid>
-                    <Grid className={classes.control2} lg={2} item md={6} xl={2} xs={12} sm={6}>
+                    <Grid className={classes.control2} lg={2} item md={6} xl={2} xs={12} sm={12}>
                         <div className="footer__widget">
                             <h6>Shopping</h6>
                             <ul>
@@ -64,7 +70,7 @@ function Footer(props) {
                             </ul>
                         </div>
                     </Grid>
-                    <Grid lg={3} item md={6} xl={3} xs={12} sm={6}>
+                    <Grid lg={3} item md={6} xl={3} xs={12} sm={12}>
                         <div className="footer__widget">
                             <h6>NewLetter</h6>
                             <div className="footer__newslatter">
